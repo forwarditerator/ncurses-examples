@@ -1,0 +1,2 @@
+Dan Gookin - Programmer's Guide to NCurses
+Sources should be compiled with -lncurses flag
