@@ -1,0 +1,16 @@
+#include <ncurses.h>
+int main() {
+	char name[46];
+	char password[9];
+	initscr();
+	mvprintw(3,10,"Enter your name: ");
+	refresh();
+	getnstr(name,45);
+	mvprintw(5, 6, "Enter your password: ");
+	refresh();
+	noecho();
+	getnstr(password,8);
+	echo(); // not necessary here but kind of RAII
+	endwin();
+	return 0;
+}
